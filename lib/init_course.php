@@ -172,7 +172,7 @@ class iniPaymentCourse {
     <?php
       if ($item['code']) { ?>
         <p>
-          <strong>[arcux-payment course="<?php echo $item['code']; ?>" submit="Pagar" plan="full" image="" redirect=""]</strong>
+          <strong>[payment-culqi course="<?php echo $item['code']; ?>" submit="Pagar" plan="full" image="" redirect=""]</strong>
         </p>
         <p><strong>Plan Options:</strong> year, full, free</p>
         <?php

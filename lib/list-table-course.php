@@ -61,7 +61,7 @@ class Payment_List_Table extends WP_List_Table {
   }
 
   function column_code($item) {
-    return '<strong>[arcux-payment course="' . $item['code'] . '" submit="Pagar" plan="full" image="" redirect=""]</strong>';
+    return '<strong>[payment-culqi course="' . $item['code'] . '" submit="Pagar" plan="full" image="" redirect=""]</strong>';
   }
 
   function column_amount($item) {

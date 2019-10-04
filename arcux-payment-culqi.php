@@ -1,8 +1,8 @@
 <?php
 /*
-  Plugin Name: Arcux Payment
+  Plugin Name: Arcux Payment Culqi
   Plugin URI: https://arcux.net
-  Description: Arcux Payment
+  Description: Using a shortcode will generate a payment form with the Culqi payment gateway.
   Version: 1.0.0
   Author: Arcux
   Author URI: https://arcux.net
@@ -17,23 +17,22 @@ include_once ('lib/list-table-person.php');
 include_once ('lib/init_course.php');
 include_once ('lib/list-table-course.php');
 include_once ('lib/endpoint.php');
+include_once ('lib/dashboard.php');
 
 $theme_active = wp_get_theme()->get('Name');
-if($theme_active != 'ArcuxT') {  
+if($theme_active != 'ArcuxT') {
   if ($_SERVER['SERVER_NAME'] == 'localhost') {
     include_once ('lib/culqi-php/culqi');
   } else {
     include_once ('lib/culqi-php/culqi.php');
   }
-} 
-
-include_once ('lib/dashboard.php');
+}
 
 if (!defined('ABSPATH'))
   exit;
 
-if (!class_exists('arcuxpayment')) {
-  class arcuxpayment {
+if (!class_exists('arcuxpaymentculqi')) {
+  class arcuxpaymentculqi {
     function __construct() {
       new initPaymentPerson();
       new iniPaymentCourse();
@@ -43,4 +42,4 @@ if (!class_exists('arcuxpayment')) {
     }
   }
 }
-new arcuxpayment;
+new arcuxpaymentculqi;

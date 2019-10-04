@@ -7,7 +7,7 @@ $t = get_option('token_public');
 
 class shortcodePayment {
   public function __construct() {
-    add_shortcode('arcux-payment', array($this, 'shortcode_payment'));
+    add_shortcode('payment-culqi', array($this, 'shortcode_payment'));
   }
 
   function shortcode_payment($atts) {
@@ -28,7 +28,7 @@ class shortcodePayment {
         'plan'     => 'full', // year, full, free
         'image'    => 'https://arcux.net/wp-content/uploads/2019/08/Planos-con-photoshop.jpg',
         'redirect' => 'https://arcux.net'
-      ), $atts, 'arcux-payment'
+      ), $atts, 'payment-culqi'
     );
     $this->form_public($atts);
     return ob_get_clean();
